@@ -13,6 +13,21 @@
     />
   </head>
   <body>
+    <div id="dashboard">
+      <div id="menuTab">
+        <button class="menuIcon" onclick="addWidget('widget1')">widget1</button>
+        <button class="menuIcon" onclick="addWidget('widget2')">widget2</button>
+        <button class="menuIcon" onclick="addWidget('widget3')">widget3</button>
+      </div>
+      <div class="workspace" id="ws-0"></div>
+    </div>
     <script src="dashboard.js"></script>
+    <script>
+      const workspace = new Workspace(document.querySelector(".workspace"));
+
+      function addWidget(type) {
+        workspace.positionWidgetPlace(type);
+      }
+    </script>
   </body>
 </html>
